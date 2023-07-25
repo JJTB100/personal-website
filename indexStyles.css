@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #c1d2ff;
+  --lighter-bg-color: #353f4e;
+  --bg-color: #323841;
+  --heading-color: #e6edff;
+  --border-color: var(--primary-color);
+  --project-title-color: var(--primary-color);
+  --project-image-gradient-color: var(--bg-color);
+}
+
+[data-theme="dark"] {
+  --primary-color: #323841;
+  --lighter-bg-color: #c1d2ff;
+  --bg-color: #ffffff;
+  --heading-color: #3e4550;
+  --border-color: var(--primary-color);
+  --project-title-color: #c1d2ff;
+  --project-image-gradient-color: var(--primary-color);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+
+}
+
+* {
+  transition: background-color 1s;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  background-color: var(--bg-color);
+
+}
+
+#forePattern {
+  opacity: 1;
+  background-image: radial-gradient(var(--primary-color) 2px, transparent 2px);
+  background-size: 50px 50px;
+  height: 400vh;
+  width: 400vw;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+  /*relative to perspective*/
+}
+
+#vignette {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 1) inset;
+}
+
+.foreground {
+  transform: translateZ(-5px) scale(1.5);
+}
+
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.title {
+  font-size: 8vw;
+  color: var(--heading-color);
+  text-shadow: 0 0 5px black;
+}
+
+#titles {
+  position: fixed;
+  text-align: center;
+}
+
+#name {
+  position: fixed;
+  text-align: center;
+  font-size: 21vw;
+  text-shadow: 0 0 20px black;
+  color: var(--lighter-bg-color);
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+}
+
+section {
+  font-size: 3.5vw;
+  padding: 2vw;
+  color: var(--primary-color);
+  height: 100%;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 1%;
+  position: absolute;
+  width: 20%;
+}
+
+#theme-swap-text {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transform: translateX(50px);
+  position: absolute;
+  margin-left: 16px;
+  display: flex;
+  left: 10%;
+  margin-top: 5%;
+  height: 34px;
+  width: 200px;
+}
+
+.theme-switch {
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: var(--heading-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked+.slider {
+  background-color: var(--primary-color);
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#projects-grid-container {
+  display: grid;
+  gap: 2vw;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 100% 100%;
+  height: 40%;
+}
+
+.grid-item {
+  border: solid thick var(--border-color);
+  border-radius: 2vw;
+  margin: 0;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.grid-item:hover{
+  transform: scale(1.1);
+}
+
+#project1{
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/HydroHeatProject.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.project-title {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+  color: var(--project-title-color);
+  text-shadow: 0 0 20% black;
+}
