@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #c1d2ff;
+  --primary-color: #c4d4ff;
   --lighter-bg-color: #353f4e;
   --bg-color: #323841;
-  --heading-color: #e6edff;
+  --heading-color: #f5f8ff;
   --border-color: var(--primary-color);
   --project-title-color: var(--primary-color);
   --project-image-gradient-color: var(--bg-color);
@@ -199,8 +199,26 @@ input:checked+.slider:before {
   transform: scale(1.1);
 }
 
-#project1{
+#projectHydroHeat{
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/HydroHeatProject.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#projectRiverSafe {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("RiverSafeProject/RiverSafePhoto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#projectClock {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("ClockProject/ClockPhoto.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#projectMetronome {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("MetronomeProject/MetronomePhoto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -213,4 +231,9 @@ input:checked+.slider:before {
   bottom: 0;
   color: var(--project-title-color);
   text-shadow: 0 0 20% black;
+}
+
+#projects-title{
+  text-align: center;
+  color: var(--heading-color)
 }
