@@ -26,6 +26,7 @@ body {
 
 * {
   transition: background-color 1s;
+  margin: 0;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -85,6 +86,7 @@ header {
   font-size: 8vw;
   color: var(--heading-color);
   text-shadow: 0 0 5px black;
+  margin: 0;
 }
 
 #titles {
@@ -103,11 +105,13 @@ header {
   font-weight: bold;
 }
 
-section {
+section,
+header {
   font-size: 3.5vw;
   padding: 2vw;
   color: var(--primary-color);
-  height: 100%;
+  height: 100vh;
+  margin-bottom: 5%;
 }
 
 .theme-switch-wrapper {
@@ -195,34 +199,38 @@ input:checked+.slider:before {
   transition: transform 0.2s;
 }
 
-.grid-item:hover{
+.grid-item:hover {
   transform: scale(1.1);
 }
 
-#projectHydroHeat{
+#projectHydroHeat {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/HydroHeatProject.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 #projectRiverSafe {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("RiverSafeProject/RiverSafePhoto.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 #projectClock {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("ClockProject/ClockPhoto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 #projectMetronome {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("MetronomeProject/MetronomePhoto.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .project-title {
   position: absolute;
   text-align: center;
@@ -233,7 +241,50 @@ input:checked+.slider:before {
   text-shadow: 0 0 20% black;
 }
 
-#projects-title{
+.sub-title {
   text-align: center;
-  color: var(--heading-color)
+  color: var(--heading-color);
+  margin-bottom: 5%;
+}
+
+.hidden{
+  opacity: 0;
+  filter:blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition-delay: 0ms !important;
+}
+
+@media(prefers-reduced-motion){
+  .hidden {
+    transition: none;
+  }
+}
+
+.grid-item:nth-child(2){
+  transition-delay: 200ms;
+}
+.grid-item:nth-child(3) {
+  transition-delay: 400ms;
+}
+.grid-item:nth-child(5) {
+  transition-delay: 200ms;
+}
+.grid-item:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+#email, #phone{
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+em{
+  color:var(--heading-color);
 }
