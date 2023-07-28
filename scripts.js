@@ -32,8 +32,10 @@ const observer = new IntersectionObserver((entries) => {
         console.log(entry);
         if (entry.isIntersecting) {
             entry.target.classList.add('show');
+            setTimeout(() => { entry.target.style.transition = "all 0.2s" }, 1000);
         } else {
             entry.target.classList.remove('show');
+            setTimeout(() => { entry.target.style.transition = "all 1s" }, 0);
         }
     })
 })
