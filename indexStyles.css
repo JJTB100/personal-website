@@ -8,7 +8,7 @@
   --project-image-gradient-color: var(--bg-color);
 }
 
-[data-theme="dark"] {
+[data-theme="light"] {
   --primary-color: #323841;
   --lighter-bg-color: #c1d2ff;
   --bg-color: #ffffff;

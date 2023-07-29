@@ -5,7 +5,6 @@ document.onmousemove = (event) => {
     if (window.scrollY == 0) {
         var x = event.clientX * 50 / visualViewport.width + "px";
         var y = event.clientY * 50 / visualViewport.height + "px";
-        console.log(x + " " + y);
         pattern.style.marginLeft = x;
         pattern.style.marginTop = y;
     }
@@ -13,14 +12,32 @@ document.onmousemove = (event) => {
 
 
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+var darkModeCache = localStorage['darkMode'] || "true";
 
-function switchTheme(e) {
-    if (e.target.checked) {
+function darkModeChecker(){
+
+    if (darkModeCache === "true") {
         document.documentElement.setAttribute('data-theme', 'dark');
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
+        console.log("light mode set:", localStorage['darkMode']);
+        toggleSwitch.checked = true;
     }
+}
+
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage['darkMode'] = "false";
+        console.log(localStorage['darkMode']);
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage['darkMode'] = "true";
+        console.log(localStorage['darkMode']);
+        }
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
