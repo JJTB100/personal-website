@@ -244,47 +244,61 @@ input:checked+.slider:before {
 .sub-title {
   text-align: center;
   color: var(--heading-color);
+  text-shadow: 0 0 5px black;
   margin-bottom: 5%;
 }
 
-.hidden{
+.hidden {
   opacity: 0;
-  filter:blur(5px);
+  filter: blur(5px);
   transform: translateX(-100%);
   transition: all 1s;
 }
 
-.show{
+.show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
   transition-delay: 0ms !important;
 }
 
-@media(prefers-reduced-motion){
+@media(prefers-reduced-motion) {
   .hidden {
     transition: none;
   }
 }
 
-.grid-item:nth-child(2){
-  transition-delay: 200ms;
-}
-.grid-item:nth-child(3) {
-  transition-delay: 400ms;
-}
-.grid-item:nth-child(5) {
-  transition-delay: 200ms;
-}
-.grid-item:nth-child(6) {
-  transition-delay: 400ms;
+.grid-item:nth-child(1) {
+  transition-delay: 300ms;
 }
 
-#email, #phone{
+.grid-item:nth-child(2) {
+  transition-delay: 600ms;
+}
+
+.grid-item:nth-child(3) {
+  transition-delay: 900ms;
+}
+
+.grid-item:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.grid-item:nth-child(5) {
+  transition-delay: 600ms;
+}
+
+.grid-item:nth-child(6) {
+  transition-delay: 900ms;
+}
+
+#email,
+#phone {
   width: 50%;
   float: left;
   text-align: center;
 }
-em{
-  color:var(--heading-color);
+
+em {
+  color: var(--heading-color);
 }
