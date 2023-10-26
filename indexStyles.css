@@ -286,7 +286,8 @@ input:checked+.slider:before {
 }
 
 #email,
-#phone {
+#phone,
+#GitHub {
   width: 50%;
   float: left;
   text-align: center;
@@ -294,4 +295,8 @@ input:checked+.slider:before {
 
 em {
   color: var(--heading-color);
+}
+
+a {
+  text-decoration: none;
 }
