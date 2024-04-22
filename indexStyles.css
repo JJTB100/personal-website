@@ -217,8 +217,8 @@ input:checked+.slider:before {
   background-size: cover;
 }
 
-#projectClock {
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("ClockProject/ClockPhoto.png");
+#projectFloatingPoint {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("FloatingPointProject/floatImg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
