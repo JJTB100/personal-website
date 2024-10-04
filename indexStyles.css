@@ -203,38 +203,29 @@ input:checked+.slider:before {
   margin: 0;
   position: relative;
   transition: transform 0.2s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .grid-item:hover {
   transform: scale(1.1);
 }
 
-#projectHydroHeat {
+#project1 {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/HydroHeatProject.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-#projectRiverSafe {
+#project2 {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("RiverSafeProject/RiverSafePhoto.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
-#projectFloatingPoint {
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("FloatingPointProject/floatImg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#project4 {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/AlevelNEA.png");
 }
 
-#projectMetronome {
+#project3 {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("MetronomeProject/MetronomePhoto.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .project-title {
