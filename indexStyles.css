@@ -193,7 +193,7 @@ input:checked+.slider:before {
 
 .grid-item {
   border: solid thick var(--border-color);
-  border-radius: 2vw;
+  border-radius:  2vw;
   margin: 0;
   position: relative;
   transition: transform 0.2s;

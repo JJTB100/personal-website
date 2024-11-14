@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapier Trigger Page</title>
+</head>
+
+<body>
+    <button onclick="triggerZapier()">Trigger Zapier</button>
+
+    <script>
+        function triggerZapier() {
+            // Replace 'YOUR_WEBHOOK_URL' with your actual Zapier webhook URL
+            const webhookUrl = 'YOUR_WEBHOOK_URL';
+
+            // You can customize the data sent to the webhook here
+            const data = {
+                message: 'Button clicked!'
+            };
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    console.log('Request sent:', response);
+                })
+                .catch(error => {
+                    console.error('Error sending request:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
