@@ -12,10 +12,8 @@
 
     <script>
         function triggerZapier() {
-            // Replace 'YOUR_WEBHOOK_URL' with your actual Zapier webhook URL
             const webhookUrl = 'https://hooks.zapier.com/hooks/catch/20728723/2r2ul8i/';
 
-            // You can customize the data sent to the webhook here
             const data = {
                 message: 'Button clicked!'
             };
@@ -33,6 +31,7 @@
                 .catch(error => {
                     console.error('Error sending request:', error);
                 });
+            window.close()
         }
     </script>
 </body>
