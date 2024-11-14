@@ -130,7 +130,7 @@ body {
       transparent 9%
     );*/
   background-image: url("media/RiverSafeLogo.png");
-  opacity: 0.1;
+  opacity: 0.6;
   background-repeat: repeat-y, space;
 
 
@@ -145,8 +145,6 @@ body {
     background-position 800ms ease;
   width: 100vw;
   z-index: -1;
-  -webkit-filter: grayscale(70%);
-  filter: grayscale(70%);
 }
 
 #menu-background-image {
