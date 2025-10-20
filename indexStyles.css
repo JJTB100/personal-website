@@ -196,8 +196,8 @@ input:checked+.slider:before {
 #projects-grid-container {
   display: grid;
   gap: 2vw;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: 100% 100%;
+  grid-template-columns: repeat(2, minmax(0, 2fr));
+  grid-template-rows: 100% 90%;
   height: 40%;
 }
 
@@ -229,7 +229,7 @@ input:checked+.slider:before {
 }
 
 #project3 {
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("MetronomeProject/MetronomePhoto.png");
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/image.png");
 }
 
 .project-title {
@@ -239,7 +239,8 @@ input:checked+.slider:before {
   width: 100%;
   bottom: 0;
   color: var(--project-title-color);
-  text-shadow: 0 0 20% black;
+  text-shadow: 0 0 0.4vw black;
+  font-size: 6vw;
 }
 
 .sub-title {
