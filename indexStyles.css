@@ -111,14 +111,18 @@ header {
   font-weight: bold;
 }
 
-section,
-header {
+section, header
+ {
   font-size: 3.5vw;
   padding: 2vw;
   color: var(--primary-color);
-  height: 100vh;
-  margin-bottom: -18%;
 }
+
+header{
+  height: 60%;
+}
+
+
 
 .theme-switch-wrapper {
   display: flex;
@@ -189,16 +193,11 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-#projects {
-  margin-bottom: 0%;
-}
-
 #projects-grid-container {
   display: grid;
   gap: 2vw;
   grid-template-columns: repeat(2, minmax(0, 2fr));
-  grid-template-rows: 100% 90%;
-  height: 40%;
+  grid-template-rows: 45vh 40vh 30vh;
 }
 
 .grid-item {
@@ -230,6 +229,10 @@ input:checked+.slider:before {
 
 #project3 {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/image.png");
+}
+
+#project5 {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), var(--project-image-gradient-color)), url("imgs/AoC.png");
 }
 
 .project-title {
@@ -294,6 +297,11 @@ input:checked+.slider:before {
 
 .grid-item:nth-child(4) {
   transition-delay: 800ms;
+}
+
+.grid-item:nth-child(5) {
+  transition-delay: 1s;
+  grid-column: 1 / -1;
 }
 
 #email,
